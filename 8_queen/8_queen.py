@@ -20,4 +20,4 @@ def isPossible(queen_number, col):
             return False
     return True
 
-NQueen(1,4)
+NQueen(1,8)
