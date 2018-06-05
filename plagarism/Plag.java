@@ -8,7 +8,7 @@ public class Plag
         System.out.println("Comparing ......");
         System.out.print("The result is ");
         String stringOne = "abcd abcd abbab";
-        String stringTwo = "erdtfgyhjuasyu asdasdfgfd abbab";
+        String stringTwo = "abcd abbab abcd";
         if(compareStrings(stringOne,stringTwo))
         {
             System.out.print("Plagiarism detected. !!!!");
@@ -40,18 +40,7 @@ public class Plag
                 }
             }
         }
-            
-        for(int counter=0;counter<=piecesA.length-1;counter++)
-        {
-            for(int counter2 = 0; counter2 < piecesB.length; counter2++)
-            {
-                if(piecesA[counter].equals(piecesB[counter2]))
-                {
-                    count2++;
-                }
-            }
-        }
-        if((count1/(int)piecesA.length)*100>=65 && (count2/(int)piecesB.length)*100>=65)
+        if((count1/(int)piecesA.length)*100>=65)
         {
             checkForPlagiarism=true;
         }    
