@@ -28,8 +28,7 @@ public class Plag
         String[] piecesB = b.split("\\s");
         
         int count1 = 0;
-        int count2 = 0;
-        
+                
         for (int counter = 0; counter <= piecesA.length - 1; counter++)
         {
             for(int counter2 = 0; counter2<= piecesB.length - 1; counter2++)
