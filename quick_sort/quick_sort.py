@@ -16,8 +16,8 @@ def quick_sort(a,low,high):
     if low<high:
         p = partition(a,low,high)
         t1 = Thread(target=quick_sort,args=(a,low,p-1))
+        t2 = Thread(target=quick_sort,args=(a,p+1,high))
         t1.start()
-        t2 = t1 = Thread(target=quick_sort,args=(a,p+1,high))
         t2.start()
         t1.join()
         t2.join()
