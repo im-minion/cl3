@@ -1,4 +1,4 @@
-package xyz.himanshu.musicplayer;
+package xyz.vaibhav.musicplayer;
 
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -11,19 +11,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
-    private final String[] listContent = {
-            "Bass Song",
-            "Drum Song",
-            "Bass Song 2",
-            "Bass Song 3",
-            "Drum Song 2"
-    };
-    private final int[] resID = {
-            R.raw.bas_loop,
-            R.raw.drumloop,
-            R.raw.bas_loop,
-            R.raw.drumloop
-    };
+    private final String[] listContent = {"Song 1", "Song 2", "Song 3", "Song 4",};
+    private final int[] resID = {R.raw.bas_loop, R.raw.drumloop, R.raw.bas_loop, R.raw.drumloop};
+
     ListView songsList;
 
     @Override
@@ -62,6 +52,5 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         mediaPlayer.release();
         Toast.makeText(this, "Music Player Terminated", Toast.LENGTH_SHORT).show();
-
     }
 }
